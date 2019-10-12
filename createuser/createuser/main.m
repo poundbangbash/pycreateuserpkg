@@ -185,7 +185,7 @@ int main(int argc, const char * argv[]) {
         } else {
             // updating existing user record
             // in Mojave + we are not allowed to update the uid or home without user approval
-            attrsToSkip = @[@"uid", @"home"];
+            attrsToSkip = @[@"uid", @"home", @"generateduid"];
         }
         Boolean success = setAttributesForUser((NSDictionary *)userdata, record, attrsToSkip);
         if (!success) {
